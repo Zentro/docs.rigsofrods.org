@@ -1,14 +1,34 @@
-body {
-  color: white;
-  background-color: #1d1d1d;
+/** Everything is tweaked with CSS variables - don't make it harder for yourself **/
+[data-md-color-scheme="beam"] {
+  --md-default-bg-color: #1d1d1d;
+  --md-default-fg-color: hsla(0,0%,100%,.6);
+  --md-default-fg-color--light: hsla(0,0%,100%,.87);
+  --md-default-fg-color--lighter: hsla(0,0%,100%,.87);
+
+  --md-primary-fg-color: #226699;
+  --md-primary-fg-color--light: #226699;
+  --md-primary-fg-color--dark: #226699;
+  --md-primary-bg-color: #fff;
+
+  --md-accent-fg-color: #2f84c5; /** Our secondary color does some weird things... */
+  --md-accent-bg-color: #fff;
+
+  --md-code-bg-color: #2c2c2c;
+  --md-code-fg-color: hsla(0,0%,100%,.87);
 }
 
 .md-typeset {
   font-size: 0.7rem;
 }
 
-.md-typeset h1 {
-  color: white;
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-nav__title {
+  color: var(--md-default-fg-color--lighter);
   font-weight: bold;
 }
 

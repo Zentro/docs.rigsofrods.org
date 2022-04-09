@@ -5,23 +5,25 @@ site_url: https://rigsofrods.org/
 
 docs_dir: source
 
-repo_name: RigsOfRods/docs.rigsofrods.org
+repo_name: RigsOfRods/ror-docs
 repo_url: https://github.com/RigsOfRods/docs.rigsofrods.org
 edit_uri: blob/master/source/
 
-copyright: "Copyright &copy; 2021 Rigs of Rods Community"
+copyright: "Copyright &copy; 2022 Petr Ohlidal & contributors"
 
 theme:
     name: "material"
     favicon: ror-favicon.png
     logo: images/branding/RoR_Logo_TT.png
+    font:
+      text: Maven Pro
     palette:
-        scheme: slate
-        primary: "blue"
-        accent: "blue"
+        scheme: beam
     features:
         - instant
         - tabs
+        - content.code.annotate
+        - navigation.top
 
 extra_css:
     - stylesheets/ror.css
@@ -35,9 +37,9 @@ plugins:
 nav:
     - Home: README.md
     - Gameplay:
-          - Installing the game: gameplay/installing-the-game.md
           - Beginner's Guide: gameplay/beginners-guide.md
-          - Installing content (mods): gameplay/installing-content.md
+          - Installation: gameplay/installation.md
+          - How to install mods: gameplay/how-to-install-mods.md
           - Controls and configuration: gameplay/controls-config.md
           - Aircraft handling: gameplay/aircraft-handling.md
           - Multiplayer server setup: gameplay/multiplayer-server-setup.md
@@ -100,6 +102,8 @@ nav:
           - Branding: tools-tutorials/branding.md
 
 markdown_extensions:
+    - attr_list
+    - md_in_html
     - admonition
     - toc:
           permalink: true

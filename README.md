@@ -1,7 +1,29 @@
-Rigs of Rods Documentation
-===========
+## Setup & Running
+```
+git clone https://github.com/RigsOfRods/ror-docs.git .
+```
 
-Here you'll find gameplay guides as well as tutorials and technical information
-for content creators.
+A recent version of Python and the Python package manager, pip, needs to be installed on your system.
 
-If you find an issue with the site, please report it on [GitHub](https://github.com/RigsOfRods/docs.rigsofrods.org/issues). Thanks!
+Using `pip`, install MkDocs:
+```
+pip install mkdocs
+```
+
+Using `pip` again, install all the perquisites:
+```
+pip install -r requirements.txt
+```
+
+Then, using `mkdocs` you can build a local static site with:
+```
+mkdocs build
+```
+
+Or, use a dev-server that compiles and hot-reloads for development:
+```
+mkdocs serve
+```
+
+## License
+
