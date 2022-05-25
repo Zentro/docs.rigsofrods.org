@@ -1,6 +1,6 @@
 # Beginner's Guide
 
-**Rigs of Rods is not beginner friendly.** 
+**Rigs of Rods is not beginner friendly. Referencing this guide every now and then is to be expected.** But don't be discouraged! This guide aims to cover
 
 ## Installation
 
@@ -20,14 +20,6 @@ Next, you should make your way to `Graphics`. You can make any adjustments to th
 
 Select `Single player` and you'll be prompted with the **Selector**. What is it? Well, it's where you select things (duh)! With the **Selector** you'll be asked to select a terrain to load. By default, you may not have that many terrains. Heck, you may not even have more than 4! This is fine and for the sake of time, select `North St Helens`. It may take a while to load, but when you do load you'll spawn as a guy lovingly refered to as RoRBot (you cannot refer to RoRBot as anything else, no one will know what you're talking about!).
 
-### User Directory
-
-* `cache`
-* `logs`
-* `mods`
-* `savegames`
-* `screenshots`
-
 ## User Interface
 
 Congratulations, you've made it this far. Keep going! Now that you've spawned, it's time to start 
@@ -44,5 +36,15 @@ We're interested in `Get new vehicle`, which is where you can open the **Spawner
 
 ### Friction
 
+## User Directory
+
+* `cache`
+* `logs`
+* `mods`
+* `savegames`
+* `screenshots`
+
 ## Mods
+* [How to install mods](how-to-install-mods.md)
+
 

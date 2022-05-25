@@ -6,7 +6,7 @@ To effortlessly install and keep Rigs of Rods up-to-date, we recommend using the
 
 On Windows, you may be presented with a Windows SmartScreen saying that it prevented an unrecognized app from starting. **Do not click Don't Run.** Click `More info` then `Run anyway`. For more details, see the .
 
-### with Installer
+### with Installer <small>recommended</small> { #with-installer data-toc-label="with Installer" }
 
 For the latest version, go to the [Download Center](https://www.rigsofrods.org/download) and select `Rigs of Rods 64-bit Installer` for Windows. You will immediately be redirected to Sourceforge, and the download will automatically begin.
 
@@ -32,7 +32,7 @@ When your download finishes, follow these steps to launch Rigs of Rods.
 
 ## Linux
 
-### with Portable (.zip)
+### with Portable (.zip) <small>recommended</small> { #with-portable-zip_1 data-toc-label="with Portable (.zip)" }
 
 For the latest version, go to the [Download Center](https://www.rigsofrods.org/download) and select `Rigs of Rods 64-bit Portable (.zip)` for Linux. You will immediately be redirected to Sourceforge, and the download will automatically begin.
 
