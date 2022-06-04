@@ -17,9 +17,9 @@
   --md-code-fg-color: hsla(0,0%,100%,.87);
 }
 
-/*.md-typeset {
-  font-size: 0.7rem;
-}*/
+.admonition-title {
+  color: var(--md-default-fg-color--lighter);
+}
 
 .md-typeset h1,
 .md-typeset h2,
@@ -31,13 +31,6 @@
   color: var(--md-default-fg-color--lighter);
   font-weight: bold;
 }
-
-/*.md-typeset h2 {
-  font-size: 1rem;
-}
-.md-typeset p {
-  margin: 0.2rem 0;
-}*/
 
 .md-header {
   background-color: #226699;
