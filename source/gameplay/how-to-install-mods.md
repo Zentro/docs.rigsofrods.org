@@ -2,6 +2,11 @@
 
 ## The simple way <small>recommended</small> { #the-simple-way data-toc-label="The simple way" }
 
+<figure markdown>
+  ![Image title](/images/win-install-mods-rm.gif){ loading=lazy }
+  <figcaption>Windows 11 version 21H1</figcaption>
+</figure>
+
 Starting with Rigs of Rods 2022.04, you can now use the handy **Repository Manager** as if you were using a browser. Similiar to a browser, you can select the type, search, and sort through the entire repository. When you find a mod you like, simply select it and click `Install`. Didn't like the mod you installed? You can remove it by clicking `Remove`. If you're having trouble with a mod click `Reinstall`.
 
 !!! warning "Are you sure you want to discard any changes you've made?"
@@ -15,7 +20,7 @@ Starting with Rigs of Rods 2022.04, you can now use the handy **Repository Manag
 ### on Windows
 <figure markdown>
   ![Image title](/images/win-install-mods.gif){ loading=lazy }
-  <figcaption>Windows 10 version 21H1</figcaption>
+  <figcaption>Windows 11 version 21H1</figcaption>
 </figure>
 The default location of your `mods` folder can be found in the **User Directory**. You will place your `*.zip` inside the `mods` folder by copy (CTRL+C) and paste (CTRL+V) or drag and drop. If you can also organize your `mods` folder by creating subfolders where you may want to sort by type.
 

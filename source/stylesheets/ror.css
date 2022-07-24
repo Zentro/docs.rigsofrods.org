@@ -1,9 +1,14 @@
+:root {
+  color-scheme: dark;
+}
+
 /** Everything is tweaked with CSS variables - don't make it harder for yourself **/
 [data-md-color-scheme="beam"] {
   --md-default-bg-color: #1d1d1d;
   --md-default-fg-color: hsla(0,0%,100%,.6);
   --md-default-fg-color--light: hsla(0,0%,100%,.87);
   --md-default-fg-color--lighter: hsla(0,0%,100%,.87);
+  --md-default-fg-color--lightest: #2c2c2c;
 
   --md-primary-fg-color: #226699;
   --md-primary-fg-color--light: #226699;
@@ -15,6 +20,12 @@
 
   --md-code-bg-color: #2c2c2c;
   --md-code-fg-color: hsla(0,0%,100%,.87);
+
+  --md-typeset-table-color: #2c2c2c;
+
+  --md-typeset-kbd-color: hsla(0,15%,94%,0.12);
+  --md-typeset-kbd-accent-color: hsla(0,15%,94%,0.2);
+  --md-typeset-kbd-border-color: hsla(0,15%,14%,1);
 }
 
 .admonition-title {
@@ -55,3 +66,40 @@
 .md-footer-meta {
   background-color: #101010;
 }
+
+.md-typeset .grid {
+  grid-gap: .4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(16rem,1fr));
+  margin: 1em 0;
+}
+
+.md-typeset .grid ul {
+  display: contents;
+}
+
+.md-typeset .grid ul li {
+  border: .05rem solid var(--md-default-fg-color--lightest);
+  border-radius: .1rem;
+  display: block;
+  margin: 0;
+  padding: .8rem;
+}
+
+.md-typeset .grid ul li hr {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.md-extra {
+  margin: auto .6rem;
+  padding: .4rem 0;
+  font-size: .64rem;
+}
+
+.md-extra__link {
+  display: inline-block;
+  text-align: center;
+  margin: 0 .25em !important;
+}
+

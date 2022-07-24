@@ -8,6 +8,11 @@ On Windows, you may be presented with a Windows SmartScreen saying that it preve
 
 ### with Installer <small>recommended</small> { #with-installer data-toc-label="with Installer" }
 
+<figure markdown>
+  ![Image title](/images/win-install-ror.gif){ loading=lazy }
+  <figcaption>Windows 11 version 21H1</figcaption>
+</figure>
+
 For the latest version, go to the [Download Center](https://www.rigsofrods.org/download) and select `Rigs of Rods 64-bit Installer` for Windows. You will immediately be redirected to Sourceforge, and the download will automatically begin.
 
 When your download finishes, follow these steps to quickly go through the installer.
