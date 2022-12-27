@@ -22,13 +22,13 @@ Starting with Rigs of Rods 2022.04, you can now use the handy **Repository Manag
   ![Image title](/images/win-install-mods.gif){ loading=lazy }
   <figcaption>Windows 11 version 21H1</figcaption>
 </figure>
-The default location of your `mods` folder can be found in the **User Directory**. You will place your `*.zip` inside the `mods` folder by copy (CTRL+C) and paste (CTRL+V) or drag and drop. If you can also organize your `mods` folder by creating subfolders where you may want to sort by type.
+The default location of your `mods` folder can be found in the **User Directory**. You will place your `*.zip` inside the `mods` folder by copy (CTRL+C) and paste (CTRL+V) or drag and drop. You can also organize your `mods` folder by creating subfolders.
 
 That's it! Now you should be able to launch Rigs of Rods and enjoy!
 
 ### on Linux
 
-With Linux, the default location where your `mods` folder is `~/.rigsofrods`. This is a hidden folder. Mind you, if you installed Rigs of Rods through Snap, the default location is `~/snap/rigs-of-rods/common/`. Drag and drop or `mv` the `*.zip` inside the `mods` folder, this may vary depending on your Linux distribution.
+With Linux, the default location where your `mods` folder is `~/.rigsofrods` and is likely hidden. If you installed Rigs of Rods through Snap, the default location is `~/snap/rigs-of-rods/common/`. Drag and drop or `mv` the `*.zip` inside the `mods` folder.
 
 You can also organize your `mods` folder by creating subfolders.
 

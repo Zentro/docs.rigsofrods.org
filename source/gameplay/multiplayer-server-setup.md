@@ -27,13 +27,13 @@ Residential routers can be different depending on your service provider. We reco
 
 Also keep in mind of your operating system may have a local firewall such as Windows Firewall or Ubuntu's Uncomplicated Firewall (ufw) that may prohibit anyone from connecting to your server including your local network.
 
-## Linux
+## Installation and setup
 
-As mentioned earlier, this guide makes many assumptions about your technical know-how with Linux. While this guide makes no assumptions about your Linux distribution, this guide will be using Debian 11. This guide also assumes 
+### with Linux
 
-### Installation
+As mentioned earlier, this guide makes many assumptions about your technical know-how with Linux. While this guide makes no assumptions about your Linux distribution, this guide will be using Debian 11.
 
-1.
+1. Uhm
 ```
 wget https://files.rigsofrods.org/
 ```
@@ -41,7 +41,26 @@ wget https://files.rigsofrods.org/
 ```
 unzip
 ```
+3. Open `server.cfg` with nano (or vim) and adjust things to your liking
+```
+nano server.cfg
+```
+4. Run and verify the changes you've made are working **Note: You can see other CLI args with the `-h` flag**
+```
+./rorserver -c server.cfg
+```
 
-## Windows
+Should you encounter an error,
+
+### with Windows
 
 This guide assumes that you are using Windows as your own home PC with Windows 10+ any edition or through the remote desktop protocol with Windows Server 2016+. This guide will be using Windows 11.
+
+1. Uhm
+2. Extract the .zip into your desired location (Do not merge with anything else!)
+3. Open `server.cfg` with Notepad (or your preferred text editor) and adjust things to your liking
+4. Double-click `StartServer.bat` and verify the changes you've made are working
+
+Should you encounter an error,
+
+## Additional setup and personalization

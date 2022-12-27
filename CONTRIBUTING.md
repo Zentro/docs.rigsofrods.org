@@ -1,4 +1,4 @@
-# Contributing guidelines 
+# Contributing guide
 
 The platform used to host the project docs has changed throughout time with the objective of making sure everything is easy to read and edit. We've settled on MkDocs with a customized Material for MkDocs theme hosted on GitHub Pages. Any changes made here will be reflected on [docs.rigsofrods.org](docs.rigsofrods.org).
 
@@ -22,7 +22,7 @@ You can go through our existing issues and find one that interests you.
 
 #### Make changes in the UI
 
-If you spot a problem that doesn't require an issue being opened such as a typo, broken link, or bad grammar then you should click. This will take you to the `.md` file where you can make your changes and [create a pull request]() for a review. 
+If you spot a problem that doesn't require an issue being opened such as a typo, broken link, or bad grammar then you should click. This will take you to the `.md` file where you can make your changes and [create a pull request]() for review. 
 
 #### Make changes in your own workspace
 

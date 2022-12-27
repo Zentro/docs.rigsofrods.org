@@ -10,7 +10,7 @@ Using `pip`, install MkDocs:
 pip install mkdocs
 ```
 
-Using `pip` again, install all the perquisites:
+Using `pip` again, install all the required packages:
 ```
 pip install -r requirements.txt
 ```
@@ -26,4 +26,3 @@ mkdocs serve
 ```
 
 ## License
-

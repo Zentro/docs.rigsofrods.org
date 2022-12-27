@@ -54,7 +54,7 @@ unzip rigs-of-rods-linux.zip
 
 ### with Snap Store
 
-**Snap Store is not OFFICIALLY maintained but is regularly kept up-to-date.** Snaps can be used on all major Linux distrubtions and is widely used because of its graphical counterpart the Snap Store.
+**Snap Store is not OFFICIALLY maintained but is regularly kept up-to-date.** Snaps can be used on all major Linux distributions and is widely used because of its graphical counterpart the Snap Store.
 
 ``` shell
 sudo snap install rigs-of-rods

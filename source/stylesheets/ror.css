@@ -103,3 +103,7 @@
   margin: 0 .25em !important;
 }
 
+.md-typeset .keys span {
+  color: var(--md-typeset-color);
+}
+

@@ -12,6 +12,11 @@ When you launch Rigs of Rods for the first time you may see a very tiny window. 
 
 ### Setup and personalization
 
+<figure markdown>
+  ![Image title](/images/win-setup-set-resolution.gif){ loading=lazy }
+  <figcaption>Windows 11 version 21H1</figcaption>
+</figure>
+
 Before doing anything, it's suggested you adjust the resolution to match your monitor's resolution (i.e. 1920x1080 or 1366x768) but do not set it to anything more than what your monitor is capable of.  **Doing so may cause an Internal Error, which will require you to delete your `config` folder from the User Directory.**
 
 You may also want to make some adjustments to the graphics settings to be better optimized for your PC. However, the settings provided should be sufficient. Also, keep in mind that DirectX is proprietary Windows software. If you're on Linux, you will only have the option to use OpenGL.
@@ -40,15 +45,50 @@ We're interested in `Get new vehicle`, which is where you can open the **Spawner
 
 This guide assumes that you are playing with *keyboard only*. As such, most keyboard controls will be covered in this guide. For more details, see the [Controls Guide](controls.md).
 
+When you spawn a new vehicle you may either start inside or outside the vehicle. If you start outside the vehicle, ++enter++ will get you inside the vehicle.
+
+When inside a vehicle you might not be inside literarily as your camera will be in third person mode. You can change this to first person mode by pressing ++c++. While inside your vehicle, you might notice that the `WASD` keys do not move your vehicle. This is because the game instead makes use of the arrow keys with ++arrow-up++ to apply throttle, ++arrow-down++ to apply brake, ++arrow-right++ to steer right, and ++arrow-left++ to steer left.
+
+### General
+
+* ++escape++ - Pause the game
+* ++alt+f4++ - Quit the game
+* ++prtsc++ - Take a screenshot
+* ++c++ - Change view
+* ++tilde++ - Open console
+* ++ctrl+g++ - Open Spawner
+* ++enter++ - Enter or exit a vehicle
+
+### Driving
+
+* ++arrow-up++  - Apply throttle
+* ++arrow-down++ - Apply brake
+* ++arrow-right++ - Steer right
+* ++arrow-left++ - Steer left
+* ++pg-up++ - Auto shift up
+* ++pg-dn++ - Auto shift down
+* ++q++ - Switch shift modes
+* ++shift++ - Clutch
+* ++a++ - Shift up
+* ++z++ - Shift down
+* ++n++ - Toggle headlights
+* ++m++ - Toggle beacons
+* ++period++ - Right signal
+* ++comma++ - Left signal
+* ++minus++ - Hazard lights
+* ++h++ - Horn
+* ++p++ - Parking brake
+
+
 ## User Directory
 
 Your **User Directory** can be found at `Documents\My Games\Rigs of Rods` on :fontawesome-brands-windows: Windows and `~/.rigsofrods` on :fontawesome-brands-linux: Linux (or with Snap Store `~/snap/rigs-of-rods/common/`).
 
-* `cache`
-* `logs`
-* `mods`
-* `savegames`
-* `screenshots`
+* `cache` - A way for the game to load quicker. If you're having trouble with a mod, it's recommended to regenerate the cache via Settings -> Diagnostics.
+* `logs` - If you're having trouble with the game `RoR.log` will be crucial to finding what's wrong.
+* `mods` - The place where all your mods are stored. You can specify different or additional folder destinations via Settings -> General
+* `savegames` - Save any progress you've made
+* `screenshots` - Any screenshots taken using ++prtsc++ will be saved here
 
 ## Mods
 * [How to install mods](how-to-install-mods.md)
