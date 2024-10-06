@@ -1,15 +1,14 @@
 site_name: Rigs of Rods Documentation
 site_description: Rigs of Rods project documentation
-site_author: Rigs of Rods Community
+site_author: Rigs of Rods contributors
 site_url: https://rigsofrods.org/
+copyright: <a href="https://docs.rigsofrods.org/" target="_blank">End-user documentation for the Rigs of Rods project. &copy; 2013-2024 Rigs of Rods contributors.</a>
 
 docs_dir: source
 
 repo_name: RigsOfRods/docs.rigsofrods.org
 repo_url: https://github.com/RigsOfRods/docs.rigsofrods.org
 edit_uri: blob/master/source/
-
-copyright: "Copyright &copy; 2024 Rigs of Rods Community"
 
 theme:
     name: "material"
@@ -18,11 +17,25 @@ theme:
     font:
       text: Maven Pro
     palette:
-      scheme: beam
+      - media: "(prefers-color-scheme: light)"
+        scheme: default
+        primary: custom
+        accent: custom
+        toggle:
+            icon: material/brightness-7
+            name: Dark
+      - media: "(prefers-color-scheme: dark)"
+        scheme: slate
+        primary: custom
+        accent: custom
+        toggle:
+            icon: material/brightness-4
+            name: Light
+
     features:
         - navigation.instant
-        - navigation.tabs # missing navigation.*
-        # - toc.integrate
+        - navigation.footer
+        #- toc.integrate
         - content.code.annotate
         - navigation.top
 
@@ -36,7 +49,7 @@ plugins:
           minify_html: true
 
 nav:
-    - Home: README.md
+    - Overview: README.md
     - Gameplay:
           - Installing the game: gameplay/installing-the-game.md
           - General FAQ: gameplay/general-faq.md
@@ -93,18 +106,13 @@ nav:
           - Alpha splatting: terrain-creation/custom-texture-splatting.md
           - Old (0.3x) terrain file format: terrain-creation/old-terrn-subsystem.md
     - Rules:
+          - Community Guidelines: rules/community-guidelines.md
+          - Repository Submission Guidelines: rules/repository-submission-guidelines.md
+          - Contributor Code of Conduct: rules/contributor-code-of-conduct.md
+          - Multiplayer Rules to Play By: rules/multiplayer-rules-to-play-by.md
+          - Privacy Policy: rules/privacy-policy.md
           - Terms of Service: rules/terms-of-service.md
-          - UNWRITTEN: rules/rules-unwritten.md
-          - STOLEN CONTENT: rules/rules-stolen-content.md
-          - NICE: rules/rules-nice.md
-          - BACKSEAT: rules/rules-backseat.md
-          - BEGGING: rules/rules-begging.md
-          - USELESS: rules/rules-useless.md
-          - SEARCH: rules/rules-search.md
-          - GRAMMAR: rules/rules-grammar.md
-          - SINGULARITY: rules/rules-singularity.md
-          - LINKS: rules/rules-links.md
-          - Branding: tools-tutorials/branding.md
+          - Project Governance: rules/project-governance.md
 
 markdown_extensions:
     - admonition
@@ -128,3 +136,13 @@ markdown_extensions:
           custom_checkbox: true
     - pymdownx.tabbed
     - pymdownx.tilde
+    - attr_list
+    - md_in_html
+    - pymdownx.superfences:
+          custom_fences:
+              - name: mermaid
+                class: mermaid
+                format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+    generator: false
