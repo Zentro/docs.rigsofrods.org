@@ -46,4 +46,4 @@ If you see something say something, don't let others ruin your multiplayer exper
 
 Game moderators are responsible for ensuring that the multiplayer experience adhere to community standards, and violations will be address in a fair and consistent manner.
 
-Members can appeal disciplinary actions. If you feel that a warning, mute, or ban was applied unfairly, [you may appeal the desicion on our Help Desk](https://helpdesk.rigsofrods.org). **You may not contact any game moderator to appeal their desicion. You may also not post in either the community forums or Discord server asking for the desicion to be reversed.**
+Members can appeal disciplinary actions. If you feel that a warning, mute, or ban was applied unfairly, [you may appeal the desicion on our Help Desk](https://helpdesk.rigsofrods.org). You may not contact any game moderator to appeal their desicion. You may also not post in either the community forums or Discord server asking for the desicion to be reversed.

@@ -48,7 +48,7 @@ Cookies are small text files which are set by us on your computer which allow us
 
 You have a right to access the personal data we hold about you or obtain a copy of it. To do so please reach out to us on our Help Desk or privacy@rigsofrods.org. If you believe that the information we hold for you is incomplete or inaccurate, you may reach out to ask us to complete or correct that information.
 
-**You also have the right to request the complete erasure of your personal data.** Please reach out to us on our Help Desk or privacy@rigsofrods.org.
+You also have the right to request the complete erasure of your personal data. Please reach out to us on our Help Desk or privacy@rigsofrods.org.
 
 ## Acceptance
 
