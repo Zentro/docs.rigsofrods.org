@@ -1,30 +1,28 @@
-Making custom HUD
+Creating custom HUD
 ============
-
-## Fundamental Concepts
 
 The GUI is described in a Layout file (*.layout). It is an XML file format.
 
 The Layout Files should be edited by the provided GUI Editor
 
-The GUI is <i>linked</i> with RoR over "User Data" Strings. 
+The GUI is *linked* with RoR over "User Data" Strings. 
 These are Strings that can be set-up in the LayoutEditors Widget Properties. 
 A link is a connection between the GUI Elements and RoR game values.
 
 The controls are separated via Layers, so they can overlap each other in a defined way:
-<a href="/images/custom-hud-layers.png"><img src="/images/custom-hud-layers.png" width="355" height="92"  /></a>
 
-Needles should go on top (<i>Main</i> Layer), static background images to the bottom (<i>Back</i> Layer)
+![custom-hud-layers](../images/custom-hud-layers.png)
+
+Needles should go on top (*Main* Layer), static background images to the bottom (*Back* Layer)
 
 ## Required Software
 
-<a rel="nofollow" class="external text" href="http://sourceforge.net/projects/rigsofrods/files/rigsofrods/0.38-dev/MyGUI_Tools_4.zip/download"
-    >Gui Editor 4</a>
+[GUI Editor 4](http://sourceforge.net/projects/rigsofrods/files/rigsofrods/0.38-dev/MyGUI_Tools_4.zip/download)
     
-(old version: <a rel="nofollow" class="external text" 
-    href="http://sourceforge.net/projects/rigsofrods/files/rigsofrods/0.38-dev/MyGUI_Tools_2.zip/download">GUI Editor 2</a>)
+(old version: [GUI Editor 2](http://sourceforge.net/projects/rigsofrods/files/rigsofrods/0.38-dev/MyGUI_Tools_2.zip/download))
 
-NOTE: some animations will not work exactly like in RoR yet. We are working on fixing this.
+!!! note
+	Some animations do not work exactly like in RoR.
 
 ## Workflow
 
@@ -35,31 +33,24 @@ NOTE: some animations will not work exactly like in RoR yet. We are working on f
 
 ## Available animations
 
-<!--
-<td><b>Animation</b></td>
-<td><b>Type / Values / Ranges</b></td>
-<td><b>Load on FPS</b></td>
-<td><b>Arguments</b></td>
-<td><b>MyGUI Control to use</b></td> -->
-
 ### rotate
 
-<img src="/images/custom-hud-anim-rotate.png">
+![custom-hud-anim-rotate](../images/custom-hud-anim-rotate.png)
 
 Rotates a single image around its center
 
-* Input type: float (real number)
-* FPS impact: light
-* Internals: based on MyGUI control 'RotatingSkin'
+- Input type: float (real number)
+- FPS impact: light
+- Internals: based on MyGUI control 'RotatingSkin'
 
-<img src="/images/custom-hud-gauge.png">
+![custom-hud-gauge](../images/custom-hud-gauge.png)
 
 Arguments:
 
-* <b>min</b> - the minimum rotation angle
-* <b>max</b> - the maximum rotation angle
-* <b>vmin</b> - the value at the minimum angle
-* <b>vmax</b> - the value at the maximum angle
+- **min** - the minimum rotation angle
+- **max** - the maximum rotation angle
+- **vmin** - the value at the minimum angle
+- **vmax** - the value at the maximum angle
 
 Example for a simple speedo gauge:
 
@@ -76,15 +67,15 @@ link=speedo_kph
 
 Switches between two images
 
-<img src="/images/custom-hud-anim-lamp.png">
+![custom-hud-anim-lamp](../images/custom-hud-anim-lamp.png)
 
-* Input type: boolean (true/false)
-* FPS impact: light
-* Internals: based on MyGUI control 'ImageBox'
+- Input type: boolean (true/false)
+- FPS impact: light
+- Internals: based on MyGUI control 'ImageBox'
 
 Arguments:
 
-* <b>texture</b> - the basename of the texture to use<br>
+- **texture** - the base name of the texture to use
 The resulting images are called [texture]-on.png and [texture]-off.png
 
 Example for a simple clutch lamp (images are clutch-on.png and clutch-off.png):
@@ -109,15 +100,15 @@ link=speedo_kph&gt;50
 
 Switches between N images
 
-<img src="/images/custom-hud-anim-series.png">
+![custom-hud-anim-series](../images/custom-hud-anim-series.png)
 
-* Input type: integer (whole number)
-* FPS impact: light
-* Internals: based on MyGUI control 'ImageBox'
+- Input type: integer (whole number)
+- FPS impact: light
+- Internals: based on MyGUI control 'ImageBox'
 
 Arguments:
 
-* <b>texture</b> - the basename of the texture to use<br>
+- **texture**- the basename of the texture to use
 The resulting images are called &lt;texture&gt;-&lt;number&gt;.png
 
 Example for a simple secured lamp (images are secured-0.png, secured-1.png and secured-2.png):
@@ -132,19 +123,19 @@ link=ties_mode
 
 Scales one image
 
-<img src="/images/custom-hud-anim-scale.png">
+![custom-hud-anim-scale](../images/custom-hud-anim-scale.png)
 
-* Input type: float (real number)
-* FPS impact: heavier
-* Internals: based on MyGUI control 'ImageBox'
+- Input type: float (real number)
+- FPS impact: heavier
+- Internals: based on MyGUI control 'ImageBox'
 
 Arguments:
 
-* <b>min</b> - the minimum size to add</li>
-* <b>max</b> - the maximum size to add</li>
-* <b>vmin</b> - the value at the minimum size</li>
-* <b>vmax</b> - the value at the maximum size</li>
-* <b>direction</b> - what side to scale up. possible values:
+- **min** - the minimum size to add
+- **max** - the maximum size to add
+- **vmin** - the value at the minimum size
+- **vmax** - the value at the maximum size
+- **direction** - what side to scale up. possible values:
  up, down, left, right
  
 Example for a simple speedo bar (which is 200 pixels width):
@@ -163,19 +154,19 @@ link=speedo_kph
 
 Moves around one image
 
-<img src="/images/custom-hud-anim-translate.png">
+![custom-hud-anim-translate](../images/custom-hud-anim-translate.png)
 
-* Input type: float (real number)
-* FPS impact: heavier
-* Internals: based on MyGUI control 'ImageBox'
+- Input type: float (real number)
+- FPS impact: heavier
+- Internals: based on MyGUI control 'ImageBox'
 
 Arguments:
 
-* <b>min</b> - the minimum size to translate
-* <b>max</b> - the maximum size to translate
-* <b>vmin</b> - the value at the minimum translation
-* <b>vmax</b> - the value at the maximum translation
-* <b>direction</b> - what side to move to. possible values:
+- **min** - the minimum size to translate
+- **max** - the maximum size to translate
+- **vmin** - the value at the minimum translation
+- **vmax** - the value at the maximum translation
+- **direction** - what side to move to. possible values:
  up, down, left, right
  
 Example for a simple speedo bar:
@@ -194,16 +185,16 @@ link=speedo_kph
 
 Displays text
 
-<img src="/images/custom-hud-anim-text.png">
+![custom-hud-anim-text](../images/custom-hud-anim-text.png)
 
-* Input type: text (max 250 characters)
-* FPS impact: light
-* Internals: based on MyGUI control 'TextBox'
+- Input type: text (max 250 characters)
+- FPS impact: light
+- Internals: based on MyGUI control 'TextBox'
 
 Arguments:
 
-* <b>format</b> - (optional) the display format that should be used, 
-see <a rel="nofollow" class="external text" href="http://www.cplusplus.com/reference/clibrary/cstdio/printf/">here for more info</a>.
+- **format** - (optional) the display format that should be used, 
+[See here for more info](https://cplusplus.com/reference/cstdio/printf/).
 
 Example for a simple speedo display:
 
@@ -212,6 +203,50 @@ anim= textstring or textformat
 format=%04.0f km/h
 link=speedo_kph
 ```
+
+### Multiple animations
+
+Since version 2026.01, you can add multiple animations to a MyGUI widget by appending a number to the properties associated to each animation. These have to be numbered in
+order (do not skip numbers!). Properties for the first animation are **not** numbered.
+
+You can set up to 11 animations (10 rotate, scale and translate operations + 1 series/textstring/textformat/lamp).
+
+Example for an aircraft attitude indicator, using custom inputs:
+
+```
+anim=translate
+min=-360
+max=360
+vmin=-100
+vmax=100
+direction=left
+link=AircraftName_CustomInput_AttitudeTranslateX
+
+anim2=translate
+min2=-360
+max2=360
+vmin2=-100
+vmax2=100
+direction2=down
+link2=AircraftName_CustomInput_AttitudeTranslateY
+
+anim3=rotate
+min3=-360
+max3=360
+vmin3=-360
+vmax3=360
+direction3=down
+link3=AircraftName_CustomInput_AttitudeRotate
+```
+
+## Widget visibility
+
+Each dashboard input source has an enabled/disabled property that sets the visibility of the MyGUI widgets associated to it.
+
+On widgets that have one or more animations, the visibility is always set by the first animation's dashboard input link.
+
+Widgets can also have a single dashboard input link with no animations, allowing you to set the visibility only.
+
 
 ## Input sources
 
@@ -238,9 +273,20 @@ link=speedo_kph
 | `parkingbrake`            | true if parking brake is on                                                       |Boolean: true/false	|Always|
 | `locked`                  | true if any hooks are locked to something                                         |Boolean: true/false	|Always|
 | `low_pressure`            | true if hydraulics cannot work as the RPM is too low                              |Boolean: true/false	|Always|
-| `lights`                  | true if headlights are on                                                         |Boolean: true/false	|Always|
-| `tractioncontrol_mode`    | TractionControl (TC) mode                                                         |Integer: 0-3: 0 = not present, 1 = off, 2 = on, 3 = active	|Always|
-| `antilockbrake_mode`      | Anti Lock Brake (ALB)                                                             |Integer: 0-3: 0 = not present, 1 = off, 2 = on, 3 = active	|Always|
+| `headlights`                  | true if headlights (low beams) are on                                                         |Boolean: true/false	|Always|
+| `highbeams`                  | true if headlights (high beams) are on                                                         |Boolean: true/false	|Always|
+| `foglights`                  | true if fog lights are on                                                                  |Boolean: true/false	|Always|
+| `sidelights`                  | true if running lights are on                                                        |Boolean: true/false	|Always|
+| `lights`                  | legacy source, now alias of `sidelights`                                          |Boolean: true/false	|Always|
+| `brake_lights`                  | true if brake lights are on                                                       |Boolean: true/false	|Always|
+| `reverse_light`                  | true if reverse lights are on                                                  |Boolean: true/false	|Always|
+| `signal_turnleft`         | left turn signal is lit.                                                         	          |Boolean: true/false	|Always|
+| `signal_turnright`        | light turn signal is lit.                                                                   |Boolean: true/false	|Always|
+| `signal_warning`          | warning signal is lit.                                                                    |Boolean: true/false	|Always|
+| `beacons`                  | true if beacons are on                                                                     |Boolean: true/false	|Always|
+| `custom_lightN`          | user controlled light is lit (N = control number 1-10).                                                            |Boolean: true/false |Always|
+| `tractioncontrol_mode`    | Traction Control (TC) mode                                                         |Integer: 0-3: 0 = not present, 1 = off, 2 = on, 3 = active	|Always|
+| `antilockbrake_mode`      | Anti-lock Brakes (ABS) mode                                                      |Integer: 0-3: 0 = not present, 1 = off, 2 = on, 3 = active	|Always|
 | `ties_mode`               | Ties locking state                        |Integer: 0-2: 0 = not tied, 1 = prelock (currently tightening), 2 = tied (locked)	|Always|
 | `screw_throttle_X`        | Boat Screw Throttle. X from 0 to 5 (DD_MAX_SCREWPROP)                             |Float: unlimited	|Screwprop exists|
 | `screw_steer_X`           | Boat Screw Steering direction. X from 0 to 5 (DD_MAX_SCREWPROP)                   |Float: unlimited, -1 = left, +1 = right?	|Screwprop exists|
@@ -253,9 +299,6 @@ link=speedo_kph
 | `wing_aoa_X`              | Wings Angle of Attack. X from 0 to 5 (DD_MAX_WING)                                |Float: unlimited	|Wing exists|
 | `altitude`                | Altitude above ground                                                             |Float: unlimited	|Aeroengine or wing exists|
 | `altitude_string`         | Altitude above ground - string                                                    |Characters: three character altitude display: "000"|Aeroengine or wing exists|
-| `signal_turnleft`         | Left turn signal is lit.                                                          |Boolean
-| `signal_turnright`        | Right turn signal is lit.                                                         |Boolean
-| `signal_warning`          | Warning signal is lit.                                                            |Boolean
 
 ## Quickstart
 
@@ -265,7 +308,7 @@ Perhaps the easiest thing to add is a text readout, here we will add a simple re
 
 You can do this by opening the Widgets tab, and under default you will find TextBox. Drag a TextBox out on the canvas as shown:
 
-<img src="/images/custom-hud-quickstart-1.png" style="width: 100%">
+![custom-hud-quickstart-1](../images/custom-hud-quickstart-1.png)
 
 **2. Change the properties of the TextBox.**
 
@@ -279,7 +322,7 @@ link=speedo_mph
 put the keyword (e.g. "anim") into the box above "Key" and put the value (e.g. "text") above the box marked "Value." 
 Then click on "Add" and repeat this step for all the user data properties. In the end you should have these properties for the TextBox:
 
-<img src="/images/custom-hud-quickstart-2.png" style="width: 100%">
+![custom-hud-quickstart-2](../images/custom-hud-quickstart-2.png)
 
 **3: Save the layout as "namehere.layout" and put the layout with the vehicle's .truck file.**
 
@@ -298,9 +341,10 @@ Extra: Add these user values to format the display like this: "xxxx.xx MPH"
 format=%.2f MPH
 ```
 
-Now you have the basics of the layouteditor, move on to more advanced readouts. Let's now create a simple speedo gauge:
+Now you have the basics of the layout editor, move on to more advanced readouts. Let's now create a simple speedo gauge:
 
-**IMPORTANT:** Put your graphics into the YourMedia sub folder, so the editor can use it.
+!!! important
+	Put your graphics into the YourMedia sub folder, so the editor can use it.
 
 1. Open the layout editor.
 2. Add an ImageBox in the same way that you added a TextBox in the first part of this quickstart.
@@ -319,3 +363,165 @@ link=speedo_kph
  as you did earlier in the quickstart.
 7. Test out your gauge, and make modifications as necessary.
 
+## Dashboard mods
+
+Introduced in version 2025.03 RC1, the dashboard mod type enables players to easily install and create different default HUDs without having to edit game files.
+
+Just like vehicles and terrains, a dashboard mod zip file is placed inside the `mods` folder.
+
+The dashboard can then be selected in `Settings` -> `UI` -> `Default truck/boat dashboard`.
+
+### Folder layout
+
+A dashboard mod contains:
+
+- `*.dashboard` file(s).
+- MyGUI `*.layout` file(s)
+- Textures
+- (optional) Preview (`filename-mini`) images
+- (optional) A [dashboard script](#dashboard-scripts) (`*.as` file) <span style="background-color:#854200">\[ Version 2026.01+ \]</span>
+
+### Dashboard file format
+
+A `*.dashboard` file is the main entry point, contains file info for the selector.
+
+Example from [Modern Analog Gauges](https://forum.rigsofrods.org/resources/modern-analog-gauges.1010/):
+
+```
+dashboard_name "Modern Analog Gauges"
+dashboard_description "Semi-transparent blue-tinted analog gauges with a digital speedo"
+dashboard_author "graphics" 899 "Mark" "example@example.com"
+dashboard_author "layouts" 899 "Mark" "example@example.com"
+dashboard_category 201
+```
+
+Generic example, using [custom inputs](#dashboard_custom_input):
+
+```
+dashboard_name "Dashboard with custom inputs"
+dashboard_description "Dashboard that uses custom inputs!"
+dashboard_author "everything" 22564 "Eze" "example@example.com"
+dashboard_category 201
+dashboard_custom_input DashboardModName_CustomInput_DieselGlowPlugLight bool
+dashboard_custom_input DashboardModName_CustomInput_FuelLevel float
+dashboard_custom_input DashboardModName_CustomInput_GaugeFaceType int
+dashboard_custom_input DashboardModName_CustomInput_ClockString string
+```
+
+#### dashboard_name
+
+<span style="color:#BD0058">(String)</span> Name of the dashboard. 
+
+#### dashboard_description
+
+<span style="color:#BD0058">(String)</span> Description/tag line, pretty self-explanatory.
+
+#### dashboard_author 
+
+<span style="color:#BD0058">(String: credit) (Int: forum ID) (String: name) (String: email))</span>
+
+- Credit: Tells what the author referenced did.
+- Forum ID:  ID of the author's RoR Forum account. To get your ID, view your forum profile and check the number shown in the URL. For example: 
+
+https://forum.rigsofrods.org/members/curiousmike.5831/
+
+`5831` would be the ID. 
+
+- Name: The name of the author.
+
+- Email: Author's email address. Optional, not shown in the selector.
+
+#### dashboard_category
+
+<span style="color:#BD0058">(Int)</span> Dashboard type. Accepted categories:
+
+- `200` - Generic
+- `201` - Truck
+- `202` - Boat
+
+#### dashboard_custom_input
+
+<span style="background-color:#854200">\[ Version 2026.01+ \]</span>
+
+Specifies a custom input source that can be modified using scripts.
+
+Parameters:
+
+-   **input_name**: <span style="color:#BD0058">Custom input name</span>. Do not use [built-in](#input-sources) names! It's highly recommended to
+use names that are unique enough to avoid conflicts, since vehicles can also have their own custom inputs! An unique name could be something like `DashboardModName_CustomInput_InputName`.
+-   **data_type**: <span style="color:#BD0058">Input data type</span>. Allowed types: `bool`, `int`, `float`, `string`. The correct data type for the input depends on its
+purpose. For instance, you use `float` to [rotate images](#rotate), `int` to control [series](#series), `bool` to control [lamps](#lamp), and `string` to [add text](#textstring-textformat) to your dashboard.
+
+
+### Dashboard scripting with AngelScript
+
+Since version 2026.01, dashboard mods can execute their own script. You just create an `*.as` file, in the same folder and **with the same name** as the `*.dashboard` file. See the [docs for DashBoardManagerClass](https://developer.rigsofrods.org/d8/d07/class_script2_game_1_1_dash_board_manager_class.html) to start controlling your dashboard!
+
+Example script:
+
+```cpp
+DashBoardManagerClass@ dash = null;
+
+// Custom values
+int DashLinkID_DieselGlowPlugLight;
+int DashLinkID_FuelLevel;
+int DashLinkID_MainOdometer;
+
+bool AreGlowPlugsOn()
+{
+	// Logic that checks if the glow plugs are on.
+	return true;
+}
+
+float GetFuelLevel()
+{
+	// Code that gets the fuel level from somewhere.
+	return 1;
+}
+
+float GetMainOdometer()
+{
+	// Code that gets the main odometer value from somewhere.
+	return 1234.5;
+}
+
+// Get the dash manager instance and link IDs at initialisation
+void main() {
+	// Get the DashBoardManager of the actor associated to this script.
+	@dash = thisActor.getDashboardManager();
+    if (@dash != null) {
+		DashLinkID_DieselGlowPlugLight = dash.getLinkIDForName("MyDashboardMod_CustomInput_DieselGlowPlugLight");
+		DashLinkID_FuelLevel = dash.getLinkIDForName("MyDashboardMod_CustomInput_FuelLevel");
+		DashLinkID_MainOdometer = dash.getLinkIDForName("MyDashboardMod_CustomInput_MainOdometer");
+    }
+}
+
+void frameStep(float dt) {
+    if (@dash != null) {
+		bool glowPlug = AreGlowPlugsOn();
+		float fuelLevel = GetFuelLevel();
+		float mainOdo = GetMainOdometer();
+		string mainOdoFormat = "ODO: " + formatFloat(mainOdo, '0', 6, 1) + " km";
+        dash.setBool(DashLinkID_DieselGlowPlugLight, glowPlug);
+        dash.setFloat(DashLinkID_FuelLevel, fuelLevel);
+        dash.setString(DashLinkID_MainOdometer, mainOdoFormat);
+    }
+}
+```
+
+### Layout file names
+
+The MyGUI `*.layout` files **MUST** be named the same as the `*.dashboard` file. For example:
+
+```
+modern_analog_gauges.dashboard
+modern_analog_gauges_3500rpm_kph.layout
+modern_analog_gauges_3500rpm_mph.layout
+modern_analog_gauges_7000rpm_kph.layout
+modern_analog_gauges_7000rpm_mph.layout
+```
+
+Optional file name tags:
+
+-  `_Nrpm` - N is the redline RPM. The layout will be used if the engine RPM meets or is below this limit. If RPM exceeds available dashboards' RPM, the closest match will be used.
+- ` _Xph` - X is units `k`= Kilometers or `m`= Miles

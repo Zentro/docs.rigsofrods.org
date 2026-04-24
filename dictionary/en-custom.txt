@@ -127,11 +127,13 @@ cSpline
 ctrl
 CTRL
 CuriousMike
+Customdashboardinputs
 AnotherFoxGuy
 da
 DAF
 dampingrate
 dampings
+DashBoardManagerClass
 Davded
 de
 De
@@ -190,6 +192,7 @@ flamewar
 flaperon
 flarematerialname
 Flarewing
+Flaregroups
 flexbodies
 Flexbodies
 flexbody
@@ -201,6 +204,7 @@ flexmeshes
 FN
 footbrake
 forset
+forvert
 forwardcommands
 Forwardcommands
 fov
@@ -347,6 +351,7 @@ maxPSI
 MaxRPM
 MaxX
 menubar
+Menubar
 meshbuilding
 meshName
 meshwheels
@@ -735,7 +740,10 @@ AmbientColor
 CaelumConfigFile
 HydraxConfigFile
 StartPosition
+StartRotation
 XYZ
+xyz
+yxz
 SandStormCubeMap
 cubemap
 CategoryID
@@ -841,3 +849,18 @@ VPNs
 nav
 yaml
 md
+AUR
+paru
+yay
+OpenAL
+Pointlight
+DirX
+DirY
+DirZ
+dashboardsource
+shifterAnimTime
+TestC
+NeoQueretaro
+Assetpacks
+AssetPacks
+HUDs
